@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>Моя фильмография | {{ title }}</title>
+    {% else %}
+    <title>Моя фильмография</title>
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+</head>
+<body>
+    <nav>
+        <div><a href="{% url 'blog-home' %}">Главная</a></div>
+        <div><a href="{% url 'blog-category' %}">Категории</a></div>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
