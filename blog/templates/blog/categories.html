@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="categories">
+    {% for category in categories %}
+        {% include 'blog/widgets/category.html' %}
+    {% endfor %}
+</div>
+{% endblock %}

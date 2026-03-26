@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="film_by_category-content">
+    {% if not category %}
+    <h1>Данная категория не найдена</h1>
+    {% else %}
+    <h1>
+        Фильмы категории 
+        "{{ category.name }}"
+    </h1>
+    {% if not films %}
+        <h2>Категория пустая</h2>
+    {% else %}
+    <div class="films-content">
+        {% for film in films %}
+            {% include 'blog/widgets/film-item.html' %}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

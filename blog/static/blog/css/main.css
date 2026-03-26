@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 nav {
@@ -15,4 +17,82 @@ nav {
     padding: 20px;
     display: flex;
     gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: grey;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav div:not(:last-child) {
+    border-right: 1px solid grey;
+    padding-right: 10px;
+}
+
+.categories, .films, .film_by_category-content {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category {
+    padding: 8px 16px;
+    background-color: lightgray;
+    border-radius: 8px;
+}
+
+.films {
+    flex-direction: column;
+}
+
+.films-content {
+    margin-top: 20px;
+}
+
+.film:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.film h2 {
+    margin-bottom: 8px;
+}
+
+.film-category {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+
+.film-content {
+    display: flex;
+}
+
+.film-image {
+    width: 150px;
+    height: 250px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.film-image img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.film-extra {
+    margin-left: 16px;
+}
+
+.film-category {
+    margin-top: 8px;
 }

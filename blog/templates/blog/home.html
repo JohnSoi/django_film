@@ -1,7 +1,14 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-<h1>Главная</h1>
+    <div class="films">
+        <div class="films-header">
+            <h1>Все фильмы</h1>
+        </div>
+        <div class="films-content">
+            {% for film in films %}
+                {% include 'blog/widgets/film-item.html' %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
-
-migrate

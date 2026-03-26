@@ -11,5 +11,9 @@ class Film(models.Model):
         Category, null=True, on_delete=models.SET_NULL
     )
 
+    @property
+    def poster_url(self) -> str:
+        return f"blog/posters/{self.poster}"
+
     def __str__(self) -> str:
         return self.name

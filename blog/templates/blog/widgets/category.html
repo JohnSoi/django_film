@@ -1,0 +1,6 @@
+<a href="{% url 'blog-category-view' category_id=category.id %}">
+    <div class="category">
+        <i class="fa-solid fa-{{ category.icon }}"></i>
+        {{ category.name }}
+    </div>
+</a>

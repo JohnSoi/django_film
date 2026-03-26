@@ -1,0 +1,20 @@
+{% load static %}
+<div class="film">
+    <h2>{{ film.name }}</h2>
+    <div class="film-content">
+        <div class="film-image">
+            <img src="{% static film.poster_url %}" alt="">
+        </div>
+        <div class="film-extra">
+            <div class="film-description">
+                {{ film.description }}
+            </div>
+            <div class="film-category">
+                <p>Категория: </p>
+                {% with category=film.category %}
+                    {% include 'blog/widgets/category.html' %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+</div>
